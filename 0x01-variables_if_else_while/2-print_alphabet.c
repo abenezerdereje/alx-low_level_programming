@@ -13,9 +13,9 @@ int main(void)
 	while (a < 123)
 	{
 		putchar(a);
-		putchar('\n');
 		a++;
 	}
+	putchar('\n');
 
 	return (0);
 }

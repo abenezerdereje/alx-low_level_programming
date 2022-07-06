@@ -30,14 +30,14 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(48 + (c / 10);
-				_putchar(48 + (c % 10);
+				_putchar(48 + (c / 10));
+				_putchar(48 + (c % 10));
 			}
 			else if (c < 1000)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(48 + (c / 1000);
+				_putchar(48 + (c / 1000));
 				_putchar(48 + ((c / 100) % 10));
 				_putchar(48 + (c % 10));
 			}

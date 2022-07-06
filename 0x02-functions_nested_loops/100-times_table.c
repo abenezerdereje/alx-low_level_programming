@@ -15,44 +15,31 @@ void print_times_table(int n)
 		while (b <= n)
 		{
 			int c = a * b;
-			char d = 48 + (c / 100);
-			char e = 48 + (c / 10);
-			char f = 48 + (c % 10);
-			char g = 48 + (c / 1000);
 
-			if (b == 0)
-				_putchar(e);
-			else if (c < 10)
+			_putchar(48 + (c % 10));
+			if (c < 10)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(f);
+				_putchar(48 + (c % 10));
 			}
 			else if (c < 100)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(e);
-				_putchar(f);
+				_putchar(48 + (c / 10);
+				_putchar(48 + (c % 10);
 			}
 			else if (c < 1000)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(d);
-				_putchar(e);
-				_putchar(f);
-			}
-			else
-			{
-				_putchar(',');
-				_putchar(g);
-				_putchar(d);
-				_putchar(e);
-				_putchar(f);
+				_putchar(48 + (c / 1000);
+				_putchar(48 + ((c / 100) % 10));
+				_putchar(48 + (c % 10));
 			}
 			b++;
 		}

@@ -54,7 +54,7 @@ void print_times_table(int n)
 				_putchar(e);
 				_putchar(f);
 			}
-			b++
+			b++;
 		}
 		_putchar('\n');
 		a++;

@@ -6,6 +6,8 @@
  */
 void print_times_table(int n)
 {
+	if (n > 15 || n < 0)
+		return;
 	int a = 0;
 
 	while (a <= n)
@@ -15,31 +17,29 @@ void print_times_table(int n)
 		_putchar('0');
 		while (b <= n)
 		{
-			int c = a * b;
-
 			if (c < 10 && b > 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(48 + (c % 10));
+				_putchar(48 + ((a * b) % 10));
 			}
 			else if (c < 100 && b > 0)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(48 + (c / 10));
-				_putchar(48 + (c % 10));
+				_putchar(48 + ((a * b) / 10));
+				_putchar(48 + ((a * b) % 10));
 			}
 			else if (c < 1000 && b > 0)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(48 + (c / 1000));
-				_putchar(48 + ((c / 100) % 10));
-				_putchar(48 + (c % 10));
+				_putchar(48 + (c / 100));
+				_putchar(48 + (((a * b) / 100) % 10));
+				_putchar(48 + ((a * b) % 10));
 			}
 			b++;
 		}

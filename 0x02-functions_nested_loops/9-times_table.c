@@ -17,17 +17,19 @@ void times_table(void)
 			char d = 48 + (c / 10);
 			char e = 48 + (c % 10);
 
-			if (c < 10)
+			if (c < 10 && b != 0)
+			{
+				_putchar(' ');
 				_putchar(e);
+			}
 			else
 			{
 				_putchar(d);
 				_putchar(e);
 			}
-			_putchar(',');
 			if (b != 9)
 			{
-				_putchar(' ');
+				_putchar(',');
 				_putchar(' ');
 			}
 			b++;

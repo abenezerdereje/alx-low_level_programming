@@ -12,12 +12,12 @@ void print_times_table(int n)
 	{
 		int b = 0;
 
+		_putchar('0');
 		while (b <= n)
 		{
 			int c = a * b;
 
-			_putchar(48 + (c % 10));
-			if (c < 10)
+			if (c < 10 && b > 0)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -25,7 +25,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(48 + (c % 10));
 			}
-			else if (c < 100)
+			else if (c < 100 && b > 0)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -33,7 +33,7 @@ void print_times_table(int n)
 				_putchar(48 + (c / 10));
 				_putchar(48 + (c % 10));
 			}
-			else if (c < 1000)
+			else if (c < 1000 && b > 0)
 			{
 				_putchar(',');
 				_putchar(' ');

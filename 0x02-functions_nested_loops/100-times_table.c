@@ -35,7 +35,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(48 + (c / 100));
+				_putchar(48 + ((a * b) / 100));
 				_putchar(48 + (((a * b) / 100) % 10));
 				_putchar(48 + ((a * b) % 10));
 			}

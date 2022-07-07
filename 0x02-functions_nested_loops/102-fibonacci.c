@@ -9,12 +9,12 @@ int main(void)
 {
 	long a = 1;
 	long b = 2;
-	long c = 0;
+	long c = 1;
 	long temp;
 
 	printf("%ld", a);
 	printf(", %ld", b);
-	while (c < 50)
+	while (c < 49)
 	{
 		printf(", %ld", a + b);
 		temp = b;

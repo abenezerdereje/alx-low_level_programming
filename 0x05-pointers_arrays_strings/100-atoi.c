@@ -25,6 +25,7 @@ int _atoi(char *s)
 					&& s[i] - 48 > 8))
 			{
 				return (num * sign);
+			}
 			num = (num * 10) + (s[i] - 48);
 			if (s[i + 1] < '0' || s[i] > '9')
 			{

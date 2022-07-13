@@ -18,6 +18,6 @@ char *strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 		i++;
 	}
-
-	return (&dest);
+	char *p = &dest;
+	return (p);
 }

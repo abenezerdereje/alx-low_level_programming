@@ -18,13 +18,13 @@ int _atoi(char *s)
 					|| (num * sign == 21474833647 / 10
 					&& s[i] - 48 > 7))
 			{
-				return (num * sign);
+				return (2147483647);
 			}
-			else if((num * sign) <= -2147483648 / 10
-					||( num* sign == -2147483648 / 10
+			else if ((num * sign) <= -2147483648 / 10
+					|| (num * sign == -2147483648 / 10
 					&& s[i] - 48 > 8))
 			{
-				return (num * sign);
+				return (-2147483648);
 			}
 			num = (num * 10) + (s[i] - 48);
 			if (s[i + 1] < '0' || s[i] > '9')

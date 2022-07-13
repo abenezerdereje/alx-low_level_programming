@@ -14,10 +14,17 @@ int _atoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (num >= 214748364)
+			if ((num * sign) > 2147483647 / 10
+					|| (num * sign == 21474833647 / 10
+					&& s[i] - 48 > 7))
 			{
 				return (num * sign);
 			}
+			else if((num * sign) <= -2147483648 / 10
+					||( num* sign == -2147483648 / 10
+					&& s[i] - 48 > 8))
+			{
+				return (num * sign);
 			num = (num * 10) + (s[i] - 48);
 			if (s[i + 1] < '0' || s[i] > '9')
 			{

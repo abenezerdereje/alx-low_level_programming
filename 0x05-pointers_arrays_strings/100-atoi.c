@@ -13,12 +13,21 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] >= '0' && s[i] <= '9')
-			num = (num * 10) + (s[i] - 48);
+		{
+			a = (num * 10) + (s[i] - 48);
+			if (num > 2147483694)
+			{
+				 return (num * sign);
+			}
+			if (s[i + 1] < '0' || s[i] > '9')
+			{
+				return (num * sign);
+			}
+		}
 		else if (s[i] == '-')
 			sign *= -1;
 		i++;
 	}
-	num *= sign;
 
-	return (num);
+	return (num * sign);
 }

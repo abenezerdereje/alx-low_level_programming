@@ -18,6 +18,7 @@ int _atoi(char *s)
 			sign *= -1;
 		i++;
 	}
+	num *= sign;
 
 	return (num);
 }

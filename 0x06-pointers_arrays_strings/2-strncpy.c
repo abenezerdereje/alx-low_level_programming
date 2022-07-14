@@ -14,8 +14,6 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (dest[j] != '\0')
 		j++;
-	if (n > j)
-		dest[n] = '\0';
 	while (i < n)
 	{
 		dest[i] = src[i];
@@ -23,6 +21,8 @@ char *_strncpy(char *dest, char *src, int n)
 			break;
 		i++;
 	}
+	if (n > j && src[i] != '\0')
+		dest[i] = '\0';
 
 	return (dest);
 }
